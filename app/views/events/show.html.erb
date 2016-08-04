@@ -1,0 +1,24 @@
+<h1>Mostrando eventos ingresados</h1>
+<div>
+  <div>
+    <strong>Nombre_del_evento: </strong>
+    <%= @event.nombreEven %>
+  </div>
+
+  <div>
+    <br>
+    <strong>Lugar: </strong>
+    <%= @event.lugar %><br>
+  </div>
+
+  <div>
+    <br>
+    <strong>Fecha: </strong>
+    <%= (@event.fechaHora).strftime(" %A, %w of %B") %><br>
+  </div>
+  <div>
+    <br>
+    <strong>Hora: </strong>
+    <%= (@event.fechaHora).strftime(" %X %p") %><br>
+  </div>
+</div>
