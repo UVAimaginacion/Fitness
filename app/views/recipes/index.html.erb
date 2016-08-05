@@ -1,0 +1,21 @@
+<h1>Recetas</h1>
+
+<% @recipes.each do |recipe| %>
+
+    <div class="card">
+      <%= image_tag recipe.image.url(:medium) %>
+      <div class="card-block">
+        <h4 class="card-title"><%= recipe.name %></h4>
+        <p class="card-text"><%= recipe.description %></p>
+        <p><%= link_to 'Show', recipe_path(recipe) %></p>
+        <p class="card-text"><small class="text-muted">
+          Last updated 3 mins ago</small>
+        </p>
+        <%= link_to 'Mostrar Receta', recipe_path(recipe) %>
+        <%= link_to 'Editar Receta', edit_recipe_path(recipe) %> |
+        <%= link_to 'Eliminar', recipe_path(recipe),
+                    method: :delete,
+                    data: { confirm: '¿Esta seguro?'} %>
+      </div>
+    </div>
+<% end %>

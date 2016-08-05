@@ -1,0 +1,21 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <strong>Ingredientes:</strong>
+  <%= @recipe.ingredient %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @recipe.description %>
+</p>
+
+<p>
+  <%= image_tag @recipe.image.url(:medium) %>
+</p>
+
+<%= link_to 'Editar Receta', edit_recipe_path(@recipe) %> |
+<%= link_to 'Volver a las recetas', recipes_path %>

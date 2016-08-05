@@ -1,0 +1,38 @@
+<%= form_for @recipe, html: { multipart: true } do |f| %>
+    <% if @recipe.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            Verifique los siguientes campos:
+          </h2>
+          <ul>
+            <% @recipe.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= f.label :name, 'Nombre' %>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :ingredient, 'Ingredientes' %><br>
+      <%= f.text_area :ingredient %>
+    </p>
+
+    <p>
+      <%= f.label :description, 'Descripción' %><br>
+      <%= f.text_area :description %>
+    </p>
+
+    <p>
+      <%= f.label :image, 'Imagen de la Receta' %>
+      <%= f.file_field :image, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= f.submit 'Guardar' %>
+    </p>
+<% end %>
