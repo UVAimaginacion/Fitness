@@ -8,13 +8,17 @@ class EventsController < ApplicationController
   end
 
   def new
+    @event = Event.new
   end
 
   def create
     @event = Event.new(event_params)
 
-    @event.save
-    redirect_to @event
+    if @event.save
+      redirect_to @event
+    else
+      render 'new'
+    end
   end
 
   private

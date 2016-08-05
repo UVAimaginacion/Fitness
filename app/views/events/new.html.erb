@@ -1,9 +1,8 @@
 <h1>CREACION DE UN NUEVO EVENTO</h1>
 <%= form_for :event, url: events_path do |f| %>
-
+    <%= render 'shared/error_messages' %>
     <div>
       <%= f.label :Responsable %>
-
       <%= f.text_field :responsable %>
     </div>
 
@@ -39,11 +38,11 @@
 
     <div>
       <br>
-      <%= f.label :Email%>
+      <%= f.label :Correo%>
       <%= f.text_field :email %><br>
     </div>
     <p>
-      <%= f.submit %>
+      <%= f.submit "Guardar evento" %>
     </p>
 <% end %>
 <%= link_to 'Volver', events_path %>
