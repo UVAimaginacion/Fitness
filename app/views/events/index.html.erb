@@ -7,18 +7,23 @@
 
 
 
-<div >
+<div class="container">
   <% @events.each do |event| %>
 
 
-    <div class="card">
-      <div class="card-block">
-        <h4 class="card-title"><%= event.nombreEven %></h4>
-        <p class="card-text">Lugar <%= event.lugar %></p>
-        <p class="card-text"><small class="text-muted">Fecha <%= event.fechaHora.strftime(" %A, %w of %B") %></small></p>
-        <p class="card-text"><small class="text-muted">Hora <%= event.fechaHora.strftime(" %X %p") %></small></p>
-        <p><%= link_to 'Mostrar', event_path(event) %></p>
-      </div>
+    <div class="card alinear">
+
+        <div class="card-block ">
+          <h4 class="card-title"><%= event.nombreEven %></h4>
+          <p class="card-text">Lugar <%= event.lugar %></p>
+          <p class="card-text"><small class="text-muted">Fecha <%= event.fechaHora.strftime(" %A, %w of %B") %></small></p>
+          <p class="card-text"><small class="text-muted">Hora <%= event.fechaHora.strftime(" %X %p") %></small></p>
+          <p><%= link_to 'Mostrar', event_path(event) %></p>
+
+
+        </div>
+
+
     </div>
 
 
