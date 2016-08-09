@@ -16,6 +16,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem "paperclip", "~> 5.0.0"
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 # gem 'capistrano-rails', group: :development
 

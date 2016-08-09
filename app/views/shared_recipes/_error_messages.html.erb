@@ -1,0 +1,20 @@
+<% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        El formulario contiene los siguientes errores
+      </div>
+      <ul>
+        <% @recipe.errors.full_messages.each do |msg| %>
+            <% if  msg == "Name can't be blank" %>
+                <li><%= "El campo nombre no puede estar vacío" %></li>
+            <% elsif msg == "Description can't be blank" %>
+                <li><%= "El campo descripción no puede estar vacío" %></li>
+            <% elsif msg == "Ingredient can't be blank" %>
+                <li><%= "El campo de ingredientes no puede estar vacío" %></li>
+            <% elsif msg == "Image can't be blank" %>
+                <li><%= "Se debe adjuntar una imagen para mostrar" %></li>
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

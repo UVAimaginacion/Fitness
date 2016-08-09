@@ -4,3 +4,5 @@ class Recipe < ApplicationRecord
                                     :content_type => ["image/jpg", "image/jpeg", "image/png"]
   validates :name, :description, :ingredient, :image, presence: true
 end
+
+
