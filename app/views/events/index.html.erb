@@ -11,9 +11,9 @@
   <% @events.each do |event| %>
 
 
-    <div class="card alinear">
+    <div class="card alinear_eventos">
 
-        <div class="card-block ">
+        <div class="card-block ancho_div_eventos">
           <h4 class="card-title"><%= event.nombreEven %></h4>
           <p class="card-text">Lugar <%= event.lugar %></p>
           <p class="card-text"><small class="text-muted">Fecha <%= event.fechaHora.strftime(" %A, %w of %B") %></small></p>

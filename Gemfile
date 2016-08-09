@@ -14,6 +14,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
