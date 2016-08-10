@@ -1,4 +1,4 @@
- <%= form_for @event do |f| %>
+<%= form_for @event do |f| %>
     <%= render 'shared_eventos/error_messages' %>
     <div>
       <%= f.label :Responsable %>
@@ -10,17 +10,22 @@
       <%= f.label :Nombre_del_evento%>
       <%= f.text_field :nombreEven %>
     </div>
-
     <div>
       <br>
-      <%= f.label :Lugar%>
-      <%= f.select :lugar, [['Hot','hot'],['Medium','medium'],['Cold','cold']]  %><br>
+      <%= f.label :Departamento%>
+      <%= f.select :departamento,[['Seleccionar','seleccionar']]  %><br>
     </div>
-
     <div>
       <br>
-      <%= f.label :Fecha_y_hora%>
-      <%= f.datetime_select :fechaHora %><br>
+      <%= f.label :Ciudad%>
+      <%= f.select :lugar, [['Seleccionar','seleccionar']]  %><br>
+    </div>
+    <div>
+      <br>
+      <%= f.label :Hora%>
+      <%= f.time_select :fechaHora %>
+      <%= f.label :Fecha%>
+      <%= f.text_field :fechaHora, id:"datepicker_e" %><br>
     </div>
     <div>
       <br>
