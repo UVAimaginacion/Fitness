@@ -1,0 +1,20 @@
+<% @recipes.each do |recipe| %>
+    <div class="card receta">
+      <div class="card-block imagen_receta">
+        <%= image_tag recipe.image.url(:medium), height: "150px", width: "270px"  %>
+      </div>
+      <div class="card-block texto_receta" >
+        <h4 class="card-title"><%= recipe.name %></h4>
+        <p class="card-text"><%= truncate(recipe.description, length: 150)  %></p>
+      </div>
+      <div class="card-block links_receta">
+        <p class="card-text"><small class="text-muted">
+          Update <%= distance_of_time_in_words_to_now(recipe.updated_at)%> ago</small></p>
+        <div class="btn btn-default boton_receta"><%= link_to 'Mostrar Receta', recipe_path(recipe) %></div>
+        <div class="btn btn-default boton_receta"><%= link_to 'Editar', edit_recipe_path(recipe) %></div>
+        <div class="btn btn-default boton_receta"><%= link_to 'Eliminar', recipe_path(recipe),
+                                                              method: :delete,
+                                                              data: { confirm: '¿Esta seguro?'} %></div>
+      </div>
+    </div>
+<% end %>

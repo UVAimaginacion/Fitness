@@ -17,3 +17,9 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+$(function() {
+    $("#recipes_search input").keyup(function() {
+        $.get($("#recipes_search").attr("action"),$("#recipes_search").serialize(),null,'script');
+        return false;
+    });
+});
