@@ -21,6 +21,5 @@
 //= require_tree .
 
 $(function() {
- 
-    $('#datepicker_e').datepicker();
+     $('#datepicker_e').datepicker();
 });

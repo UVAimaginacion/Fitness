@@ -1,13 +1,11 @@
-<h1>EVENTOS</h1>
-<div>
-  <p>Accediendo a la creación de eventos <br>
-    <%= link_to 'Nuevo Evento', new_event_path %>
-  </p>
-</div>
-
-
-
 <div class="container">
+  <h1>EVENTOS</h1>
+  <div>
+    <p>Accediendo a la creación de eventos <br>
+      <%= link_to 'Nuevo Evento', new_event_path %>
+    </p>
+  </div>
+
   <% @events.each do |event| %>
 
 
