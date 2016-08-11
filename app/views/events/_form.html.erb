@@ -15,7 +15,8 @@
       <br>
       <%= f.label :Departamento%>
       <% if @event.departamento != nil %>
-          <%= f.select :departamento, [[@event.departamento]]  %><br>
+          <%= f.select :departamento, options_for_select([f.object.departamento]) %>
+          <br>
       <% else%>
           <%= f.select :departamento, [['Seleccionar','seleccionar']]  %><br>
       <% end%>
@@ -24,7 +25,8 @@
       <br>
       <%= f.label :Ciudad%>
       <% if @event.lugar != nil %>
-          <%= f.select :lugar, [[@event.lugar ]]  %><br>
+          <%= f.select :lugar, options_for_select([[f.object.lugar]], f.object.lugar) %>
+      <br>
       <% else%>
           <%= f.select :lugar, [['Seleccionar','seleccionar']]  %><br>
       <% end%>
