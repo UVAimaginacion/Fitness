@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Tips</h1>
+    <p>Encuentra los mejores consejos de alimentación y ejercicios en este lugar.</p>
+  </div>
+
+
+
+  <%= form_tag tips_path, :method => 'get', :id => "tips_search" do %>
+      <div class="container">
+        <%= text_field_tag :search, params[:search] %>
+        <submit class="btn btn-default"><%= submit_tag "Buscar Receta", :name => nil %></submit>
+      </div>
+      <div class="container"  id="tips"><%= render 'tip' %></div>
+  <% end %>
+</div>

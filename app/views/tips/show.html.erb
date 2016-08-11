@@ -1,0 +1,16 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @tip.name %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @tip.description %>
+</p>
+
+<p>
+  <%= image_tag @tip.image.url(:medium) %>
+</p>
+
+<%= link_to 'Editar Tip', edit_tip_path(@tip) %> |
+<%= link_to 'Volver a tips', tips_path %>

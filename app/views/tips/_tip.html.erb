@@ -1,0 +1,20 @@
+<% @tips.each do |tip| %>
+    <div class="card receta">
+      <div class="card-block imagen_receta">
+        <%= image_tag tip.image.url(:medium), height: "150px", width: "270px"  %>
+      </div>
+      <div class="card-block texto_receta" >
+        <h4 class="card-title"><%= tip.name %></h4>
+        <p class="card-text"><%= truncate(tip.description, length: 150)  %></p>
+      </div>
+      <div class="card-block links_receta">
+        <p class="card-text"><small class="text-muted">
+          Update <%= distance_of_time_in_words_to_now(tip.updated_at)%> ago</small></p>
+        <div class="btn btn-default boton_receta"><%= link_to 'Mostrar Tip', tip_path(tip) %></div>
+        <div class="btn btn-default boton_receta"><%= link_to 'Editar', edit_tip_path(tip) %></div>
+        <div class="btn btn-default boton_receta"><%= link_to 'Eliminar', tip_path(tip),
+                                                              method: :delete,
+                                                              data: { confirm: '¿Esta seguro?'} %></div>
+      </div>
+    </div>
+<% end %>

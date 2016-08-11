@@ -23,3 +23,10 @@ $(function() {
         return false;
     });
 });
+
+$(function() {
+    $("#tips_search input").keyup(function() {
+        $.get($("#tips_search").attr("action"),$("#tips_search").serialize(),null,'script');
+        return false;
+    });
+});
