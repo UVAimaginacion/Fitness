@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imagen: MyString
+  musculo: MyString
+  descripcion: MyString
+
+two:
+  imagen: MyString
+  musculo: MyString
+  descripcion: MyString

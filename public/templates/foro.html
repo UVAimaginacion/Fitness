@@ -1,0 +1,35 @@
+<div ng-controller="foro">
+  <div>
+    <button ng-click="showWindowforPublic()">Publicar</button>
+  </div>
+
+  <div ng-include="'templates/windowPublicar.html'"></div>
+  <div ng-include="'templates/windowComentar.html'"></div>
+
+  <div>
+    <div class="border-show margin-show" ng-repeat="publicacion in publicaciones track by $index">
+      <div>
+        <p>Nombre: </p> <p>{{publicacion.nombre}}</p>
+      </div>
+      <div>
+        <p>Tags: </p> <p>{{publicacion.tags}}</p>
+      </div>
+      <div>
+        <p>Inquietud: </p> <p>{{publicacion.texto}}</p>
+      </div>
+      <div class="actions">
+          <button ng-click="verRespuestas(publicacion.id,$index)">Ver Respuestas</button>
+          <button ng-click="comentarios[$index] = {}">Ocultar Respuestas</button>
+          <button ng-click="showWindowComment(publicacion.id)">Comentar</button>
+      </div>
+      <div  ng-repeat="comment in comentarios[$index]">
+        <div>
+          <p>Nombre: </p> <p>{{comment.nombre}}</p>
+        </div>
+        <div>
+          <p>Respuesta: </p> <p>{{comment.comentario}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

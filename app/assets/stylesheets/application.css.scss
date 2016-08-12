@@ -1,0 +1,41 @@
+$color-background : #e9ebee;
+
+
+@import "bootstrap";
+
+.border-show{
+  border: solid #000000 1px;
+}
+
+.margin-show{
+  margin: 5px;
+}
+
+.card{
+  display: inline-block !important;
+  margin-right: 1.5rem;
+  margin-top:1.0rem;
+  width: 25%;
+  text-align: left;
+  font-size: 0.8rem;
+  -webkit-box-shadow: 10px 4px 5px 0px rgba(204,204,204,1);
+  -moz-box-shadow: 10px 4px 5px 0px rgba(204,204,204,1);
+  box-shadow: 10px 4px 5px 0px rgba(204,204,204,1);
+}
+
+.card-block{
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.img-responsive{
+  width: 100%;
+}
+
+.container{
+  background-color: white;
+  padding-top: 1.0rem;
+}
+
+body{
+  background-color: $color-background !important;
+}
