@@ -13,8 +13,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'bootstrap3-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.6'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
