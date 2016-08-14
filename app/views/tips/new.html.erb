@@ -1,5 +1,13 @@
-<h1>Ingresar Tip</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Ingresar Nuevo Tip</h2>
+  </div>
+  <div class="panel-body">
+    <%= render 'form' %>
+  </div>
 
-<%= render 'form' %>
+  <div class="panel-footer">
+    <%= link_to 'Volver a tips', tips_path %>
+  </div>
+</div>
 
-<%= link_to 'Volver a tips', tips_path %>

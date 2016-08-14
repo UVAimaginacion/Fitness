@@ -1,21 +1,27 @@
-<p>
-  <strong>Nombre:</strong>
-  <%= @recipe.name %>
-</p>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Receta: <small><%= @recipe.name %></small></h1>
+  </div>
 
-<p>
-  <strong>Ingredientes:</strong>
-  <%= @recipe.ingredient %>
-</p>
+  <div class="container">
+    <p>
+      <h4>Ingredientes:</h4><br>
+      <%= @recipe.ingredient %>
+    </p>
 
-<p>
-  <strong>Descripción:</strong>
-  <%= @recipe.description %>
-</p>
+    <p>
+    <h4>Descripción:</h4><br>
+      <%= @recipe.description %>
+    </p>
 
-<p>
-  <%= image_tag @recipe.image.url(:medium) %>
-</p>
+    <p>
+      <%= image_tag @recipe.image.url %>
+    </p>
+  </div>
 
-<%= link_to 'Editar Receta', edit_recipe_path(@recipe) %> |
-<%= link_to 'Volver a las recetas', recipes_path %>
+
+  <div class="container">
+    <%= link_to 'Editar Receta', edit_recipe_path(@recipe) %> |
+    <%= link_to 'Volver a las recetas', recipes_path %>
+  </div>
+</div>

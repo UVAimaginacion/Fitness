@@ -1,9 +1,11 @@
 <%= form_for @recipe, html: { multipart: true } do |f| %>
-    <%= render 'shared_recipes/error_messages' %>
+  <%= render 'shared_recipes/error_messages' %>
+
+  <div class="container">
 
     <div>
       <%= f.label :name, 'Nombre' %>
-      <%= f.text_field :name %>
+      <%= f.text_area :name %>
     </div>
 
     <div>
@@ -13,15 +15,23 @@
 
     <div>
       <%= f.label :description, 'Descripción' %><br>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, size: "20x20" %>
     </div>
 
     <div>
-      <%= f.label :image, 'Imagen de la Receta' %>
-      <%= f.file_field :image, class: 'form-control' %>
+      <p>
+        <%= f.label :image, 'Imagen de la Receta' %>
+      </p>
+      <p>
+        <%= image_tag @recipe.image.url(:medium) %>
+      </p>
+      <p>
+        <%= f.file_field :image %>
+      </p>
     </div>
 
-    <div>
-      <%= f.submit 'Guardar' %>
+    <div class="container guardar">
+      <a class="waves-effect waves-light btn"><%= f.submit 'Guardar' %></a>
     </div>
+  </div>
 <% end %>
