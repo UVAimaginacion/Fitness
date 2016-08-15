@@ -2,6 +2,7 @@
  * Created by williamd on 8/08/16.
  */
 function loadJSON(callback) {
+
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', "http://"+window.location.host +'/colombia.json', true); // Reemplaza colombia-json.json con el nombre que le hayas puesto
@@ -30,6 +31,7 @@ function updateCities(){
 // accion del evento al presionar los departamentos
 $(document).ready(function () {
     $("#event_departamento").one('mousedown',function () {
+        console.log("presiono 1");
         init(this);
     });
     $("#event_departamento").change(function () {
@@ -47,11 +49,17 @@ function updateCities2(ciudades){
 
 // accion del evento al presionar las ciudades en la vista edit
 $( "#event_lugar" ).one('mousedown',function() {
-    var aux_depar= $("#event_departamento").val();//console.log(aux_depar);
+    var aux_depar= $("#event_departamento").val();
+    console.log(aux_depar);
     if (aux_depar == null) {
+
     }else{
         Json(aux_depar);
+
     }
+
+
+
 });
 
 function Json(aux_departamento) {
@@ -64,7 +72,8 @@ function Json(aux_departamento) {
                 ciudades = value.ciudades;
                 return;
             }
-        });//console.log(ciudades);
+        });
+        console.log(ciudades);
         updateCities2(ciudades);
     });
 }

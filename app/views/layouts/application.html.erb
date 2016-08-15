@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fitness</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Fitness</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  </head>
-
-  <body>
-   <%= yield %>
-  </body>
-
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<body>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
