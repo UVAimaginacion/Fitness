@@ -4,6 +4,16 @@ class Recipe < ApplicationRecord
                                     :content_type => ["image/jpg", "image/jpeg", "image/png"]
   validates :name, :description, :ingredient, :image, presence: true
 
+  def name=(val)
+    write_attribute :name, val.capitalize
+  end
+  def ingredient=(val)
+    write_attribute :ingredient, val.capitalize
+  end
+  def description=(val)
+    write_attribute :description, val.capitalize
+  end
+
   def self.search(search)
     if search
       where('name LIKE ?', "%#{search}%")

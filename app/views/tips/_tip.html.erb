@@ -1,34 +1,10 @@
-<!--
-    <div class="receta">
-      <div class="thumbnail">
-        <div class="imagen_receta">
-          < image_tag tip.image.url(:medium), height: "150px", width: "270px"  %>
-        </div>
-        <div class="caption">
-          <div class="container texto_receta" >
-            <h4 class="card-title">< tip.name %></h4>
-            <p class="card-text">< truncate(tip.description, length: 150)  %></p>
-          </div>
-          <div class="card-block links_receta">
-            <p class="card-text"><small class="text-muted">
-              Update <distance_of_time_in_words_to_now(tip.updated_at)%> ago</small></p>
-            <div class="btn btn-default boton_receta">< link_to 'Mostrar Tip', tip_path(tip) %></div>
-            <div class="btn btn-default boton_receta">< link_to 'Editar', edit_tip_path(tip) %></div>
-            <div class="btn btn-default boton_receta">< link_to 'Eliminar', tip_path(tip),
-                                                                  method: :delete,
-                                                                  data: { confirm: '¿Esta seguro?'} %></div>
-          </div>
-        </div>
-      </div>
-    </div>
--->
 <div class="row">
   <% @tips.each do |tip| %>
     <div class="col-md-4">
-      <div class="box">
-        <div class="imagen_alimentacion">
+      <div class="card_alimentacion">
+        <div class="img_alimentacion">
           <%= image_tag tip.image.url(:medium), width: "300px" %>
-          <h2 class="img_alim"><%= tip.name %></h2>
+          <h2 class="name_alimentacion"><%= tip.name %></h2>
         </div>
         <div class="descripcion_alimentacion">
           <p><%= truncate(tip.description, length: 150)  %></p>
@@ -36,11 +12,11 @@
               Update <%= distance_of_time_in_words_to_now(tip.updated_at)%> ago</small></p>
         </div>
         <div class="links_alimentacion">
-          <a><%= link_to 'Mostrar Tip', tip_path(tip) %></a><br>
-          <a><%= link_to 'Editar', edit_tip_path(tip) %></a><br>
-          <a><%= link_to 'Eliminar', tip_path(tip),
+          <%= link_to 'Mostrar Tip', tip_path(tip), class: "link_alimentos" %>
+          <%= link_to 'Editar', edit_tip_path(tip), class: "link_alimentos" %>
+          <%= link_to 'Eliminar', tip_path(tip),
                          method: :delete,
-                         data: { confirm: '¿Esta seguro?'} %></a>
+                         data: { confirm: '¿Esta seguro?'}, class: "link_alimentos" %>
         </div>
       </div>
     </div>

@@ -7,14 +7,13 @@
     <h2><%= @tip.name %></h2>
 
     <p>
-    <%= @tip.description %>
+    <%= @tip.description.gsub(/\n/, '<br/>').html_safe %>
     </p>
 
     <p class="show_imagen">
       <%= image_tag @tip.image.url %>
     </p>
   </div>
-
 
   <div class="container">
     <%= link_to 'Editar Tip', edit_tip_path(@tip) %> |

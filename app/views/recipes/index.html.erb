@@ -1,19 +1,28 @@
 <div class="container">
   <div class="jumbotron">
-    <h1>Recetas</h1>
-    <p>Aquí podrás encontrar las mejores recetas para que disfrutes de tu alimentación saludablemente.</p>
+    <div class="container titulo_alimentacion">
+      <h1>Recetas</h1>
+      <p>Aquí podrás encontrar las mejores recetas para que disfrutes de tu alimentación saludablemente.</p>
+    </div>
   </div>
 
   <%= form_tag recipes_path, :method => 'get', :id => "recipes_search" do %>
 
     <div class="buscador_alimentacion">
-      <%= text_field_tag :search, params[:search] %>
-      <a class="waves-effect waves-light btn"><%= submit_tag "Buscar Receta", :name => nil %></a>
-    </div>
-    <div class="contenedor_alimentacion"  id="recipes"><%= render 'recipe' %></div>
+        <%= text_field_tag :search, params[:search], class:"form-control submit_alimentacion" %>
 
+        <%= submit_tag "Buscar Receta", :name => nil, class:"btn btn-default" %>
+    </div>
+
+      <div class="contenedor_alimentacion"  id="recipes">
+        <%= render 'recipe' %>
+      </div>
   <% end %>
 
-  <a><%= link_to 'Crear una nueva receta',  new_recipe_path %></a><br>
+  <div class="link_nuevoalim">
+    <%= link_to 'Crear una nueva receta',  new_recipe_path %>
+  </div>
+
 </div>
+
 
