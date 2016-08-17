@@ -6,7 +6,7 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
     $scope.updateRutinas = function() {
         $scope.rutinas = RutinasRest.query();
     };
-    
+
     $scope.updateRutinas();
 
 }]).controller('foro',['$scope','ForoRest', 'ComentariosRest',function ($scope,ForoRest,ComentariosRest) {

@@ -1,0 +1,25 @@
+<div class="row">
+  <% @tips.each do |tip| %>
+    <div class="col-md-4">
+      <div class="card_alimentacion">
+        <div class="img_alimentacion">
+          <%= image_tag tip.image.url(:medium), width: "300px" %>
+          <h2 class="name_alimentacion"><%= tip.name %></h2>
+        </div>
+        <div class="descripcion_alimentacion">
+          <p><%= truncate(tip.description, length: 150)  %></p>
+          <p><small class="text-muted">
+              Update <%= distance_of_time_in_words_to_now(tip.updated_at)%> ago</small></p>
+        </div>
+        <div class="links_alimentacion">
+          <%= link_to 'Mostrar Tip', tip_path(tip), class: "link_alimentos" %>
+          <%= link_to 'Editar', edit_tip_path(tip), class: "link_alimentos" %>
+          <%= link_to 'Eliminar', tip_path(tip),
+                         method: :delete,
+                         data: { confirm: '¿Esta seguro?'}, class: "link_alimentos" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

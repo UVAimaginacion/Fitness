@@ -1,7 +1,6 @@
 $color-background : #e9ebee;
-
-
 @import "bootstrap";
+
 
 .border-show{
   border: solid #000000 1px;
@@ -39,3 +38,76 @@ $color-background : #e9ebee;
 body{
   background-color: $color-background !important;
 }
+
+//Natalia
+.titulo_alimentacion {
+  text-align: center;
+}
+
+.link_nuevoalim {
+  margin-top: 20px;
+}
+
+.buscador_alimentacion {
+  margin-bottom: 20px;
+}
+
+.submit_alimentacion {
+  display: inline-block;
+  width: 300px;
+}
+
+.card_alimentacion {
+  border: 1px solid lightgrey;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  text-align: justify;
+  width: 302px;
+  margin: 1%;
+  background-color: white;
+}
+
+.img_alimentacion {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.name_alimentacion {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+
+.descripcion_alimentacion {
+  width: 300px;
+  padding: 15px;
+}
+
+.links_alimentacion {
+  border-top: 1px solid gainsboro;
+  padding: 15px;
+  color: orange;
+}
+
+.link_alimentos {
+  margin-right: 1.0em;
+  border-right: 1px solid gainsboro;
+}
+
+.show_alimentacion {
+  margin-left: 114px;
+  width: 80%;
+}
+
+.show_imagen {
+  text-align: center;
+}
+
+.edit_new_guardar {
+  margin-top: 20px;
+}
+

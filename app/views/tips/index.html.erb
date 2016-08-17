@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="container titulo_alimentacion">
+      <h1>FIT TIPS</h1>
+      <p>Encuentra los mejores consejos de alimentación y ejercicios en este lugar.</p>
+    </div>
+  </div>
+
+  <%= form_tag tips_path, :method => 'get', :id => "tips_search" do %>
+
+    <div class="buscador_alimentacion">
+      <%= text_field_tag :search, params[:search], class:"form-control submit_alimentacion" %>
+      <%= submit_tag "Buscar Tip", :name => nil, class:"btn btn-default" %>
+    </div>
+
+    <div class="contenedor_alimentacion"  id="tips"><%= render 'tip' %></div>
+
+  <% end %>
+
+  <div class="link_nuevoalim">
+    <%= link_to 'Crear un nuevo tip',  new_tip_path %>
+  </div>
+
+</div>
+
+
