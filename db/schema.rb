@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20160811001222) do
     t.index ["publicacione_id"], name: "index_comments_on_publicacione_id"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string   "responsable"
+    t.string   "nombreEven"
+    t.string   "lugar"
+    t.datetime "fechaHora"
+    t.text     "descripcion"
+    t.text     "telefono"
+    t.text     "email"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "departamento"
+  end
+
   create_table "publicaciones", force: :cascade do |t|
     t.string   "nombre"
     t.text     "texto"
@@ -33,7 +46,6 @@ ActiveRecord::Schema.define(version: 20160811001222) do
     t.string   "name"
     t.text     "ingredient"
     t.text     "description"
-    t.string   "image"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"

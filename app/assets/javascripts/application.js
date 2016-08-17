@@ -1,10 +1,12 @@
 //= require jquery
 //= require jquery_ujs
+
 //= require bootstrap
 //= require tether
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require angular
+
 //= require_tree .
 
 
@@ -21,3 +23,11 @@ $(function() {
         return false;
     });
 });
+//eventos
+$(function() {
+     $("#events_search input").keyup(function() {
+          $.get($("#events_search").attr("action"),$("#events_search").serialize(),null,'script');
+          return false;
+     });
+});
+

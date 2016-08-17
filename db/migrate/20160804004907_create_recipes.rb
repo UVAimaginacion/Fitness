@@ -7,7 +7,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_attachment :recipes, :image
+
   end
 
 end
