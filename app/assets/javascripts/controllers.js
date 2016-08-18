@@ -6,8 +6,28 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
     $scope.updateRutinas = function() {
         $scope.rutinas = RutinasRest.query();
     };
+
+    $scope.showRutina = function (id) {
+        //$location.url(window.location.host+'/rutinaespecifica/').search({id:id});
+        window.location.href = "/rutinaespecifica?id=" + id;
+    };
     
     $scope.updateRutinas();
+
+}]).controller('rutinaEspecifica',['$scope', '$location','RutinasRest',function ($scope, $location , RutinasRest){
+
+    $scope.updateRutina = function(id){
+        RutinasRest.query(function (data) {
+            $.each(data,function (index,value) {
+                if(value.id == id){
+                    $scope.rutina = value;
+                    return;
+                }
+            });
+        });
+    };
+
+    $scope.updateRutina(getUrlParameter('id'));
 
 }]).controller('foro',['$scope','ForoRest', 'ComentariosRest',function ($scope,ForoRest,ComentariosRest) {
     $scope.comentarios = [];
@@ -34,9 +54,6 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
     };
 
     $scope.comentarPublicacion = function(nombre, comentario){
-        console.log(nombre);
-        console.log(comentario);
-        console.log($scope.idForComment);
         ComentariosRest.save({publicacion_id: String($scope.idForComment), nombre:nombre, comentario:comentario},function(data){
             console.log(data);
         });
@@ -44,9 +61,8 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
 
     $scope.verRespuestas = function (id, index) {
           ComentariosRest.query({id:id}, function (data) {
-          $scope.comentarios[index] = data;
-          console.log($scope.comentarios);
-      });
+                $scope.comentarios[index] = data;
+          });
         
     };
 

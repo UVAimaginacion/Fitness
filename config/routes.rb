@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get     '/comentarios/:id',       to: 'comment#show'
   post    '/comentarios',           to: 'comment#create'
 
+  get     '/rutinaespecifica',   to: 'welcome#rutinaespecifica'
+
   #root "welcome#rutinas"
   #root 'welcome#foro'
   root 'welcome#navegador'
