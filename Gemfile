@@ -19,14 +19,11 @@ gem 'bootstrap-sass'
 #gem 'bootstrap-sass', '~> 3.3.6'
 gem "paperclip", "~> 5.0.0"
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.1.0'
-end
+
 
 gem 'sprockets-rails'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-turbolinks'
-gem 'bootstrap3-rails'
 
 
 
