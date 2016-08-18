@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Fit Tips</h1>
+  </div>
+
+  <div class="show_alimentacion">
+    <h2><%= @tip.name %></h2>
+
+    <p>
+    <%= @tip.description.gsub(/\n/, '<br/>').html_safe %>
+    </p>
+
+    <p class="show_imagen">
+      <%= image_tag @tip.image.url %>
+    </p>
+  </div>
+
+  <div class="container">
+    <%= link_to 'Editar Tip', edit_tip_path(@tip) %> |
+    <%= link_to 'Volver a tips', tips_path %>
+  </div>
+</div>
+

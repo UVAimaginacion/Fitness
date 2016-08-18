@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808230943) do
+ActiveRecord::Schema.define(version: 20160811001222) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "nombre"
@@ -21,12 +21,37 @@ ActiveRecord::Schema.define(version: 20160808230943) do
     t.index ["publicacione_id"], name: "index_comments_on_publicacione_id"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string   "responsable"
+    t.string   "nombreEven"
+    t.string   "lugar"
+    t.datetime "fechaHora"
+    t.text     "descripcion"
+    t.text     "telefono"
+    t.text     "email"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "departamento"
+  end
+
   create_table "publicaciones", force: :cascade do |t|
     t.string   "nombre"
     t.text     "texto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "tags"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string   "name"
+    t.text     "ingredient"
+    t.text     "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "rutinas", force: :cascade do |t|
@@ -36,6 +61,18 @@ ActiveRecord::Schema.define(version: 20160808230943) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "nombre"
+  end
+
+  create_table "tips", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

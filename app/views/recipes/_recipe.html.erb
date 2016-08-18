@@ -1,0 +1,26 @@
+<div class="row">
+  <% @recipes.each do |recipe| %>
+        <div class="col-md-4">
+          <div class="card_alimentacion">
+            <div class="img_alimentacion">
+              <%= image_tag recipe.image.url(:medium), width: "300px"  %>
+              <h2 class="name_alimentacion"><%= recipe.name %></h2>
+            </div>
+            <div class="descripcion_alimentacion">
+              <p><%= truncate(recipe.description, length: 150)  %></p>
+              <p><small class="text-muted">
+                Update <%= distance_of_time_in_words_to_now(recipe.updated_at)%> ago</small></p>
+            </div>
+            <div class="links_alimentacion">
+              <%= link_to 'Mostrar Receta', recipe_path(recipe), class: "link_alimentos" %>
+              <%= link_to 'Editar', edit_recipe_path(recipe), class: "link_alimentos" %>
+              <%= link_to 'Eliminar', recipe_path(recipe),
+                             method: :delete,
+                             data: { confirm: '¿Esta seguro?'}, class: "link_alimentos" %>
+            </div>
+          </div>
+        </div>
+  <% end %>
+</div>
+
+

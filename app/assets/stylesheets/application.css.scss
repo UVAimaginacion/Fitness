@@ -1,14 +1,13 @@
+
 $color-background : #e9ebee;
-
-
 @import "bootstrap";
+@import "events";
+@import "alimentacion";
+@import "ejercicios";
 
-.border-show{
-  border: solid #000000 1px;
-}
 
-.margin-show{
-  margin: 5px;
+* {
+  box-sizing: border-box;
 }
 
 .card{
