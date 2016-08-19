@@ -13,10 +13,13 @@
         </div>
         <div class="links_alimentacion">
           <%= link_to 'Mostrar Tip', tip_path(tip), class: "link_alimentos" %>
-          <%= link_to 'Editar', edit_tip_path(tip), class: "link_alimentos" %>
-          <%= link_to 'Eliminar', tip_path(tip),
+          <% if can? :manage, tip %>
+
+            <%= link_to 'Editar', edit_tip_path(tip), class: "link_alimentos" %>
+            <%= link_to 'Eliminar', tip_path(tip),
                          method: :delete,
                          data: { confirm: '¿Esta seguro?'}, class: "link_alimentos" %>
+          <% end %>
         </div>
       </div>
     </div>

@@ -6,9 +6,9 @@ class WelcomeController < ApplicationController
   end
 
   def navegador
-    @tips = Tip.all
-    @recipes = Recipe.all
-    @events = Event.all
 
+  end
+
+  def rutinaespecifica
   end
 end

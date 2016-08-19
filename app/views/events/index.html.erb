@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron jumbotron-eventos">
   <h1>EVENTOS</h1>
   <div>
     <p>Accediendo a la creación de eventos <br>
@@ -8,6 +8,7 @@
 </div>
 
 <div class="container">
+
   <%= form_tag events_path, :method => 'get', :id => "events_search" do %>
       <div >
         <div style="display: inline-block">
@@ -21,5 +22,5 @@
         <%= render 'event' %>
       </div>
   <% end %>
-
 </div>
+

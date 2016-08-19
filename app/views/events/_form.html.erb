@@ -14,7 +14,23 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-4" >
+      <div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :Teléfono%><br>
+          <%= f.text_field :telefono, autofocus: true,class: "form-control"  %>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :Correo%>
+          <%= f.text_field :email, autofocus: true,class: "form-control" %><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3" >
         <div class="form-group">
           <%= f.label :Departamento%> <br>
           <% if @event.departamento != nil %>
@@ -26,7 +42,7 @@
         </div>
       </div>
 
-      <div class="col-sm-4" >
+      <div class="col-sm-3" >
         <div class="form-group" >
           <%= f.label :Ciudad%> <br>
           <% if @event.lugar != nil %>
@@ -36,38 +52,29 @@
           <% end%>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <div class="form-group">
-          <%= f.label :Fecha%>
+          <%= f.label :Fecha%> <br>
           <%= f.date_select :fechaHora, {}, {class: "select_d_c_data tamselec_data"}%>
         </div>
       </div>
-
-      <div class="col-sm-6">
+      <div class="col-sm-2">
         <div class="form-group">
-          <%= f.label :Hora%>
+          <%= f.label :Hora%> <br>
           <%= f.time_select :fechaHora, {}, {class: "select_d_c_data tamselec_datat"}%>
         </div>
       </div>
     </div>
+
+
 
     <div class="form-group">
       <%= f.label :Descripción%><br>
       <%= f.text_area :descripcion, autofocus: true,class: "form-control"  %>
     </div>
 
-    <div class="form-group">
-      <%= f.label :Teléfono%><br>
-      <%= f.text_field :telefono, autofocus: true,class: "form-control"  %>
-    </div>
 
-    <div class="form-group">
-      <%= f.label :Correo%>
-      <%= f.text_field :email, autofocus: true,class: "form-control" %><br>
-    </div>
     <p>
       <%= f.submit "Guardar evento",class:"btn btn-primary" %>
     </p>

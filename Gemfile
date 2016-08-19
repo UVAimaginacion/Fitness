@@ -14,14 +14,13 @@ gem 'jbuilder', '~> 2.5'
 gem "angularjs-rails"
 gem "active_model_serializers"
 gem 'bootstrap-sass'
-
+gem 'devise'
+gem 'cancancan', '~> 1.10'
 # Use Capistrano for deployment
 #gem 'bootstrap-sass', '~> 3.3.6'
 gem "paperclip", "~> 5.0.0"
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.1.0'
-end
+
 
 gem 'sprockets-rails'
 # gem 'capistrano-rails', group: :development
