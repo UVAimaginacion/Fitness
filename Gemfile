@@ -26,7 +26,6 @@ end
 gem 'sprockets-rails'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-turbolinks'
-gem 'bootstrap3-rails'
 
 
 

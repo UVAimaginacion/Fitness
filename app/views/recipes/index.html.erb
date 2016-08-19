@@ -1,11 +1,11 @@
-<div class="container">
-  <div class="jumbotron">
-    <div class="container titulo_alimentacion">
-      <h1>Recetas</h1>
-      <p>Aquí podrás encontrar las mejores recetas para que disfrutes de tu alimentación saludablemente.</p>
-    </div>
+<div class="jumbotron jumbotron-recipes">
+  <div class="titulo_alimentacion">
+    <h1>Recetas</h1>
+    <p>Aquí podrás encontrar las mejores recetas para que disfrutes de tu alimentación saludablemente.</p>
   </div>
+</div>
 
+<div class="container">
   <%= form_tag recipes_path, :method => 'get', :id => "recipes_search" do %>
 
     <div class="buscador_alimentacion">

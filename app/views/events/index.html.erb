@@ -1,13 +1,13 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>EVENTOS</h1>
-    <div>
-      <p>Accediendo a la creación de eventos <br>
-        <%= link_to 'Nuevo Evento', new_event_path %>
-      </p>
-    </div>
+<div class="jumbotron">
+  <h1>EVENTOS</h1>
+  <div>
+    <p>Accediendo a la creación de eventos <br>
+      <%= link_to 'Nuevo Evento', new_event_path %>
+    </p>
   </div>
+</div>
 
+<div class="container">
   <%= form_tag events_path, :method => 'get', :id => "events_search" do %>
       <div >
         <div style="display: inline-block">
