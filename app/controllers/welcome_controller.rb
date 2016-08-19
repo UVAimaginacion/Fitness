@@ -6,6 +6,7 @@ class WelcomeController < ApplicationController
   end
 
   def navegador
+
   end
 
   def rutinaespecifica

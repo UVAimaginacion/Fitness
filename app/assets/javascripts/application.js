@@ -3,7 +3,6 @@
 //= require bootstrap
 //= require turbolinks
 //= require angular
-
 //= require_tree .
 
 
