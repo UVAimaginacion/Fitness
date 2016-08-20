@@ -10,7 +10,7 @@ class Ability
        else
          can :read, :all
          can :create, Event
-         # can :manage, Event, :user_id => user.id
+         can :manage, Event, :user_id => user.id
        end
     #
     # The first argument to `can` is the action you are giving the user

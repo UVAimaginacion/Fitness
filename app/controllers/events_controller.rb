@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, except: [:show,:index]
   def index
     #@events = Event.all
     @events = Event.search(params[:search])
@@ -15,7 +16,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
   def create
-    @event = Event.new(event_params)
+    @event =current_user.events.new(event_params)
 
     if @event.save
       redirect_to @event
@@ -40,6 +41,8 @@ class EventsController < ApplicationController
   end
 
   private
+
+
   def event_params
     params.require(:event).permit(:responsable, :nombreEven, :lugar, :fechaHora, :descripcion, :telefono, :email, :departamento)
   end

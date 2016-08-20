@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  belongs_to :user
   before_save { email.downcase! }
   validates :responsable, presence:true
   validates :nombreEven, presence:true
