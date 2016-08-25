@@ -1,8 +1,11 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>Fit Tips</h1>
+<div class="jumbotron jumbotron-tips">
+  <div class= "titulo_alimentacion">
+    <h1>FIT TIPS</h1>
+    <p>Encuentra los mejores consejos de alimentación y ejercicios para tu rutina diaria.</p>
   </div>
+</div>
 
+<div class="container">
   <div class="show_alimentacion">
     <h2><%= @tip.name %></h2>
 
@@ -16,7 +19,9 @@
   </div>
 
   <div class="container">
-    <%= link_to 'Editar Tip', edit_tip_path(@tip) %> |
+    <% if can? :manage, @tip %>
+      <%= link_to 'Editar Tip', edit_tip_path(@tip) %>
+    <% end %>
     <%= link_to 'Volver a tips', tips_path %>
   </div>
 </div>
