@@ -1,8 +1,11 @@
-<div class="container">
-  <div class="jumbotron">
+<div class="jumbotron jumbotron-recipes">
+  <div class="titulo-index">
     <h1>Recetas</h1>
+    <p>Aquí podrás encontrar las mejores recetas para que disfrutes de tu alimentación saludablemente.</p>
   </div>
+</div>
 
+<div class="container">
   <div class="show_alimentacion">
     <h2><%= @recipe.name %></h2>
 
@@ -21,7 +24,9 @@
   </div>
 
   <div class="container">
-    <%= link_to 'Editar Receta', edit_recipe_path(@recipe) %> |
+    <% if can? :manage, @recipe %>
+      <%= link_to 'Editar Receta', edit_recipe_path(@recipe) %>
+    <% end %>
     <%= link_to 'Volver a Recetas', recipes_path %>
   </div>
 </div>

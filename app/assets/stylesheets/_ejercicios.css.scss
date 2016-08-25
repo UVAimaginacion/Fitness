@@ -32,6 +32,16 @@
   padding-top: 1.0rem;
 }
 
+.read-more-text{
+  color: blue;
+  margin-bottom: 0px;
+}
+
+.read-more-text:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 body{
   //background-color: $color-background !important;
 }
