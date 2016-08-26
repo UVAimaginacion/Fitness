@@ -40,14 +40,16 @@
   width: 300px;
 }
 
-.card_alimentacion {
+.tarjeta {
+  background-color: white;
   border: 1px solid lightgrey;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
+  margin: 1%;
   text-align: justify;
   width: 302px;
-  margin: 1%;
-  background-color: white;
+
+
 }
 
 .img_alimentacion {
@@ -65,12 +67,12 @@
   text-align: left;
 }
 
-.descripcion_alimentacion {
+.descripcion {
   width: 300px;
   padding: 15px;
 }
 
-.links_alimentacion {
+.links-tarjeta {
   border-top: 1px solid gainsboro;
   padding: 15px;
   color: orange;

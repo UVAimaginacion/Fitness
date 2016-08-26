@@ -6,10 +6,10 @@ class Event < ApplicationRecord
   validates :departamento, presence:true, exclusion: {in: %w(seleccionar) }
   validates :lugar, presence:true, exclusion: {in: %w(seleccionar) }
   validates :fechaHora, presence:true
-  validates :descripcion, length: { maximum: 250 }
+  validates :descripcion, length: { maximum: 315 }
   validates :telefono, presence:true, numericality: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, length: { maximum: 255 },
+  validates :email, presence: true, length: { maximum: 20 },
             format: { with: VALID_EMAIL_REGEX }
 
 

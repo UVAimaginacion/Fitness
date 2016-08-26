@@ -1,10 +1,12 @@
 
 $color-background : #e9ebee;
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "events";
 @import "alimentacion";
 @import "ejercicios";
 
+/* Override Bootstrap 3 font locations */
 
 * {
   box-sizing: border-box;
