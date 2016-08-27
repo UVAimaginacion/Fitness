@@ -10,6 +10,13 @@
   </head>
 
   <body>
+  <% if user_signed_in? %>
+     <!-- <= render 'welcome/navbarusuario' %>   -->
+  <%else %>
+      <!-- <= render 'welcome/navbarhome' %> -->
+
+  <% end %>
+
 
       <%= yield %>
 
