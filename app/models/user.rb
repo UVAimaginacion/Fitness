@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   enum rol: [ :admin, :usuario  ]
-
+  has_many :events
   before_create :define_rol
 
   def define_rol
