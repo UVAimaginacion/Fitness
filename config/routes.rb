@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
   #root "welcome#rutinas"
   #root 'welcome#foro'
-  root 'welcome#navegador'
+  #root 'welcome#navegador'
+  #root  'welcome#addrutina'
+  root  'welcome#adminforo'
 
   resources :recipes
   #root 'recipes#index'

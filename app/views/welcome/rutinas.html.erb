@@ -5,6 +5,10 @@
 
     <div class="card" ng-repeat="rutina in rutinas | filter: {musculo : searchFilter}">
         <img class="card-img-top img-responsive" src="/images/rutinas/espalda/espalda.jpeg">
+      <div class="card-block">
+        <h4 class="card-title">Nombre: </h4>
+        <p class="card-text">{{rutina.nombre}}</p>
+      </div>
         <div class="card-block">
             <h4 class="card-title">Descripcion: </h4>
             <p class="card-text">{{rutina.descripcion}}</p>

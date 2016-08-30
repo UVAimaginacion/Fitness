@@ -1,0 +1,16 @@
+<div ng-controller = "adminforo">
+    <div ng-repeat = "publicacion in foro">
+        <div>
+            <p>Nombre: </p> <p>{{publicacion.nombre}}</p>
+        </div>
+        <div>
+            <p>Tags: </p> <p>{{publicacion.tags}}</p>
+        </div>
+        <div>
+            <p>Inquietud: </p> <p>{{publicacion.texto}}</p>
+        </div>
+        <div class="actions">
+            <button ng-click="eliminarPublicacion(publicacion.id)">Eliminar</button>
+        </div>
+    </div>
+</div>

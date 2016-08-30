@@ -10,4 +10,12 @@ class WelcomeController < ApplicationController
 
   def rutinaespecifica
   end
+
+  def addrutina
+
+  end
+
+  def adminforo
+
+  end
 end

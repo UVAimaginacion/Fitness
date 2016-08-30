@@ -1,0 +1,20 @@
+<div class="container text-center" ng-controller="addrutina">
+    <div>
+        <div>
+            <input type="text" placeholder="Nombre" ng-model="rutinas.nombre">
+        </div>
+        <div>
+            <input type="text" placeholder="Musculos" ng-model="rutinas.musculos">
+        </div>
+        <div>
+            <textarea rows="15" cols="50" ng-model="rutinas.descripcion"></textarea>
+        </div>
+        <div>
+            <h3>Agrega una imagen alusiva</h3>
+            <input id="idfileAdjunto" type="file">
+        </div>
+        <div>
+            <button ng-click="addRutina(musculos, descripcion, nombre,'idfileAdjunto')">Agregar Rutina</button>
+        </div>
+    </div>
+</div>
