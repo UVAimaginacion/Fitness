@@ -21,7 +21,8 @@ Rails.application.routes.draw do
 
   #root "welcome#rutinas"
   #root 'welcome#foro'
-  root 'welcome#navegador'
+  root 'welcome#home'
+  get 'welcome/navegador'
 
   resources :recipes
   #root 'recipes#index'
