@@ -12,7 +12,5 @@ class WelcomeController < ApplicationController
   def rutinaespecifica
   end
 
-  def home
-  end
 end
 
