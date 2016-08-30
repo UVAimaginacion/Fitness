@@ -6,7 +6,7 @@
 </div>
 
 <div class="container">
-  <div class="show_alimentacion">
+  <div class="show">
     <h2><%= @recipe.name %></h2>
 
     <p>
@@ -18,7 +18,7 @@
       <%= @recipe.description.gsub(/\n/, '<br/>').html_safe %>
     </p>
 
-    <p class="show_imagen">
+    <p class="show-imagen">
       <%= image_tag @recipe.image.url %>
     </p>
   </div>
