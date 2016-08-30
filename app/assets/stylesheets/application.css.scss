@@ -1,15 +1,16 @@
 
 $color-background : #e9ebee;
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "events";
 @import "alimentacion";
 @import "ejercicios";
 
+/* Override Bootstrap 3 font locations */
 
 * {
   box-sizing: border-box;
 }
-
 
 .jumbotron-home {
   background-image: url(https://photos-2.dropbox.com/t/2/AADOytTmNsIErXXwLhao7D0CC-XnyXlW7qr5QRHYO4g4cA/12/589416381/jpeg/32x32/1/_/1/2/Landing.jpg/EMnY0t8EGBAgAigC/If2eneuS_poSUzeJ6nvfsgYBRJfr6Z-Wx2yK_nLHO5U?size=1600x1200&size_mode=3);
@@ -55,6 +56,7 @@ $color-background : #e9ebee;
   height: 500px;
 
 }
+
 
 
 
