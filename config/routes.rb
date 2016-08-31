@@ -19,19 +19,18 @@ Rails.application.routes.draw do
 
   get     '/rutinaespecifica',   to: 'welcome#rutinaespecifica'
 
-  #get     '/home',         to: 'home#index'
   #root "welcome#rutinas"
   #root 'welcome#foro'
-<<<<<<< HEAD
+
   root 'welcome#navegador'#este es el que coloco sebastian
   #root 'welcome#home'
-  #resources :welcome
-=======
-  root 'pages#home'
+  resources :welcome
+
+  #root 'pages#home'
   get 'welcome/navegador'
 
   resources :pages
->>>>>>> eec54ed3110f763d25e668d896e1fecdf6c4966c
+
   resources :recipes
   #root 'recipes#index'
 

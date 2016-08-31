@@ -1,34 +1,38 @@
-
 <div class="container">
   <div class="panel panel-default">
+    <% if can? :manage, @users %>
+      <div class="panel-heading">
+        <h1> Información de los ususarios registrados</h1>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <tr>
+            <th>#</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+          </tr>
+          <% @users.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.lastname %></td>
+                <td><%= user.email %></td>
+              </tr>
+          <% end %>
+        </table>
+      </div>
+    <% else %>
+        <div class="panel-heading" style="background-color: #ee6e73">
+          <div style="text-align: center">
+            <h1> Información Confidencial</h1>
+          </div>
 
-    <div class="panel-heading">
-      <h1> Información de los ususarios registrados</h1>
-    </div>
-    <div class="panel-body">
-      <table class="table">
-        <tr>
-          <th>#</th>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Correo</th>
-        </tr>
+        </div>
+        <div class="panel-body">
 
-        <% @users.each do |user| %>
-            <tr>
-              <td><%= user.id %></td>
-              <td><%= user.name %></td>
-              <td><%= user.lastname %></td>
-              <td><%= user.email %></td>
-            </tr>
-        <% end %>
-      </table>
-
-    </div>
-    <div class="panle-footer">
-
-    </div>
-
+        </div>
+    <% end %>
   </div>
 </div>
 
