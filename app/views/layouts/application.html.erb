@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <!-- Redireccionando para los diferentes roles  -->
+  <% if user_signed_in? %>
+
+     <!-- <= render 'welcome/navbarusuario' %>   -->
+  <%else %>
+      <!-- <= render 'welcome/navbarhome' %> -->
+
+  <% end %>
+
 
       <%= yield %>
 

@@ -19,12 +19,19 @@ Rails.application.routes.draw do
 
   get     '/rutinaespecifica',   to: 'welcome#rutinaespecifica'
 
+  #get     '/home',         to: 'home#index'
   #root "welcome#rutinas"
   #root 'welcome#foro'
+<<<<<<< HEAD
+  root 'welcome#navegador'#este es el que coloco sebastian
+  #root 'welcome#home'
+  #resources :welcome
+=======
   root 'pages#home'
   get 'welcome/navegador'
 
   resources :pages
+>>>>>>> eec54ed3110f763d25e668d896e1fecdf6c4966c
   resources :recipes
   #root 'recipes#index'
 
@@ -34,8 +41,8 @@ Rails.application.routes.draw do
   #root 'events#index'
   resources :events
   #get 'events/show'
-
   #get 'events/new'
+  resources :registros
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
