@@ -1,0 +1,34 @@
+
+<div class="container">
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+      <h1> Información de los ususarios registrados</h1>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Correo</th>
+        </tr>
+
+        <% @users.each do |user| %>
+            <tr>
+              <td><%= user.id %></td>
+              <td><%= user.name %></td>
+              <td><%= user.lastname %></td>
+              <td><%= user.email %></td>
+            </tr>
+        <% end %>
+      </table>
+
+    </div>
+    <div class="panle-footer">
+
+    </div>
+
+  </div>
+</div>
+

@@ -4,6 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-User.create(email: "m@gmail.com",  password: "123456789", rol: "admin" )
-User.create(email: "admin@gmail.com", password: "123456789", rol: "admin" )
+User.create(email: "admin1@gmail.com", password: "123456", rol: "admin", name: "admin1", lastname: "admin1")
+User.create(email: "admin2@gmail.com", password: "123456", rol: "admin", name: "admin2", lastname: "admin2")
+User.create(email: "admin3@gmail.com", password: "123456", rol: "admin", name: "admin3", lastname: "admin3")
 
