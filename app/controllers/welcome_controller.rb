@@ -18,4 +18,8 @@ class WelcomeController < ApplicationController
   def adminforo
 
   end
+
+  def about
+
+  end
 end

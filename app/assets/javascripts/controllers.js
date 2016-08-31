@@ -27,6 +27,10 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
         });
     };
 
+    $scope.return = function () {
+        $location.path('/');
+    };
+
     $scope.updateRutina(getUrlParameter('id'));
 
 }]).controller('addrutina',['$scope', '$location','RutinasRest',function ($scope, $location , RutinasRest){

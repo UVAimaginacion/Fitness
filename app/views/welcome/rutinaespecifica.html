@@ -1,13 +1,16 @@
 <div class="container text-center" ng-controller="rutinaEspecifica">
-    <div>
+    <div class="container-rutina">
         <img class="img-responsive" src="/images/rutinas/espalda/espalda.jpeg">
-        <div>
+        <div class="rutina-description">
             <h4>Descripcion: </h4>
             <p>{{rutina.descripcion}}</p>
         </div>
-        <div>
+        <div class="rutina-musculo">
             <h4>Musculos: </h4>
             <p>{{rutina.musculo}}</p>
         </div>
+    </div>
+    <div>
+        <button class="btn btn-info" ng-click="return()">Volver</button>
     </div>
 </div>
