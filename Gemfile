@@ -19,12 +19,9 @@ gem 'cancancan', '~> 1.10'
 #gem 'bootstrap-sass', '~> 3.3.6'
 gem "paperclip", "~> 5.0.0"
 
-
-
 gem 'sprockets-rails'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-turbolinks'
-
 
 group :development, :test do
   gem 'sqlite3'
