@@ -1,11 +1,14 @@
-
+.about{
+  background-color: white;
+}
 .about .introduction{
   text-align: justify;
   vertical-align: middle;
   padding: 2.0rem 2.0rem 2.0rem 2.0rem;
 }
 .about .profile{
-  padding: 2.0rem 1.0rem 2.0rem 1.0rem;
+  padding: 5.0rem 1.0rem 5.0rem 1.0rem;
+  border-top: 1px solid grey;
 }
 
 .about .profile div{
@@ -28,3 +31,14 @@
   width: 70%;
 }
 
+.blue-border img{
+  border: 3px solid blueviolet;
+}
+
+.lime-border img{
+  border: 3px solid limegreen;
+}
+
+.orange-border img{
+  border: 3px solid orange;
+}
