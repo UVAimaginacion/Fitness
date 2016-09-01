@@ -25,9 +25,6 @@ gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'spring'
-  gem 'guard'
-  gem 'guard-livereload', require: false
 end
 # para empezar hacer deploy a gerocu
 
