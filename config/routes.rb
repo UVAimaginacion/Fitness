@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   #root "welcome#rutinas"
   #root 'welcome#foro'
 
-  root 'welcome#navegador'#este es el que coloco sebastian
+  root 'pages#home'#este es el que coloco sebastian
   #root 'welcome#home'
   resources :welcome
 
