@@ -7,20 +7,11 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-
-
-<div class="container home-linkregistro">
-  <%=link_to "Regístrate totalmente gratis y accede al mejor contenido FitMove", new_user_registration_path, class: "btn btn-primary btn-lg btn-block", style: 'font-size:30px' %>
-</div>
-=======
 <% unless  user_signed_in? %>
     <div class="container home-linkregistro">
       <%=link_to "Regístrate totalmente gratis y accede al mejor contenido FitMove", new_user_registration_path, class: "btn btn-primary btn-lg btn-block", style: 'font-size:30px' %>
     </div>
 <% end %>
-
->>>>>>> bf004b10c8ba0eb0c60f4d414f54f3e1e6313e65
 
 <div class="row">
 
