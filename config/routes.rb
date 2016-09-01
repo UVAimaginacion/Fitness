@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   post    '/comentarios',           to: 'comment#create'
 
   get     '/rutinaespecifica',   to: 'welcome#rutinaespecifica'
-
+  get     '/rutina',              to:'welcome#rutinas'
+  get     '/about',               to:'welcome#about'
+  get     '/foro',                to:'welcome#foro'
   #root "welcome#rutinas"
   #root 'welcome#foro'
 
@@ -40,7 +42,7 @@ Rails.application.routes.draw do
   #root 'welcome#navegador'
   #root  'welcome#addrutina'
   #root  'welcome#adminforo'
-  root 'welcome#about'
+  #root 'welcome#about'
 
 
   resources :recipes
