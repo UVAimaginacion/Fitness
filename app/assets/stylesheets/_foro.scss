@@ -1,0 +1,29 @@
+.container-foro{
+  margin:auto;
+  width: 60%;
+  margin-top: 3.0rem;
+  background: white;
+  padding: 2.0rem 2.0rem 2.0rem 2.0rem;
+  text-align: center;
+}
+
+.container-foro .container-publicaciones{
+  text-align: justify;
+}
+
+.container-foro .container-publicaciones .container-publicacion{
+  padding: 1.0rem;
+  border: 1px solid rgb(206, 206, 206);
+}
+
+.container-foro .container-publicaciones .container-publicacion .actions{
+  text-align: right;
+}
+
+.container-foro .container-publicaciones .container-publicacion div:not(.actions){
+  border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.container-foro .container-publicaciones .container-publicacion div:not(:first-child){
+  padding-top: 1.0rem;
+}
