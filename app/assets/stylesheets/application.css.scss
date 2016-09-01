@@ -1,11 +1,14 @@
-  $color-background : #e9ebee;
+$color-background : #e9ebee;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "events";
+@import "alimentacion";
+@import "ejercicios";
+@import "about";
+@import "rutinaespecifica";
+@import "foro";
 
-  @import "bootstrap-sprockets";
-  @import "bootstrap";
-  @import "events";
-  @import "alimentacion";
-  @import "ejercicios";
-  @import url(//db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli);
+@import url(//db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli);
   /* Override Bootstrap 3 font locations */
   @font-face {font-family: "MV Boli";
     src: url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.eot");
@@ -82,6 +85,45 @@
     height: 500px;
 
   }
+
+
+
+
+.container-cards{
+  padding-bottom: 2.0rem;
+  padding-top: 2.0rem;
+  text-align: center;
+}
+
+.card-rutina{
+  display: inline-block !important;
+  margin-right: 1.5rem;
+  margin-top:1.0rem;
+  width: 20%;
+  text-align: left;
+  font-size: 0.8rem;
+  -webkit-box-shadow: 10px 4px 5px 0px rgba(204,204,204,1);
+  -moz-box-shadow: 10px 4px 5px 0px rgba(204,204,204,1);
+  box-shadow: 10px 4px 5px 0px rgba(204,204,204,1);
+  border: 1px solid rgb(206, 206, 206);
+}
+
+.card-rutina .block-rutina{
+  border-top: 1px solid rgba(0,0,0,.125);
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  text-align: justify;
+}
+
+.search-rutina input{
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  border: 1px solid rgb(206, 206, 206);
+}
+
+.pointer{
+  cursor: pointer;
+  cursor: hand;
+}
+
 
 
 

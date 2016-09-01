@@ -26,11 +26,23 @@ Rails.application.routes.draw do
   #root 'welcome#home'
   resources :welcome
 
+
   root 'pages#home'
   get 'welcome/navegador'
 
   resources :pages
   get 'home' => 'pages#home'
+
+  #root 'pages#home'
+
+  resources :pages
+  #root 'welcome#foro'
+  #root 'welcome#navegador'
+  #root  'welcome#addrutina'
+  #root  'welcome#adminforo'
+  ##root 'welcome#about'
+
+
   resources :recipes
   #root 'recipes#index'
 
