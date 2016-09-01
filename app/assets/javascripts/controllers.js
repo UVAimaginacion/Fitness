@@ -27,7 +27,24 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
         });
     };
 
+    $scope.return = function () {
+        $location.path('/');
+    };
+
     $scope.updateRutina(getUrlParameter('id'));
+
+}]).controller('addrutina',['$scope', '$location','RutinasRest',function ($scope, $location , RutinasRest){
+    $scope.rutinas = {};
+    $scope.addRutina = function(musculos, descripcion, nombre, idfileAdjunto){
+        if(musculos && descripcion){
+            RutinasRest.save({descripcion:descripcion,musculo:musculos, nombre:nombre}, function(data){
+                if(!data.$resolved){
+                    alert("Ocurrio un error en el proceso, intentalo de nuevo.");
+                }
+                $scope.rutinas = {};
+            });
+        }
+    };
 
 }]).controller('foro',['$scope','ForoRest', 'ComentariosRest',function ($scope,ForoRest,ComentariosRest) {
     $scope.comentarios = [];
@@ -68,6 +85,19 @@ app.controller('rutinas',['$scope', '$location','RutinasRest',function ($scope, 
 
     $scope.updatePublicacionesForo();
 
+}]).controller('adminforo',['$scope','ForoRest',function ($scope,ForoRest){
+
+    $scope.updateForo = function () {
+        $scope.foro = ForoRest.query();
+    };
+
+    $scope.eliminarPublicacion = function (id) {
+        ForoRest.delete({id:id},function (data) {
+            $scope.updateForo();
+        });
+    };
+
+    $scope.updateForo();
 }]);
 
 /*

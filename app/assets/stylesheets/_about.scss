@@ -1,0 +1,30 @@
+
+.about .introduction{
+  text-align: justify;
+  vertical-align: middle;
+  padding: 2.0rem 2.0rem 2.0rem 2.0rem;
+}
+.about .profile{
+  padding: 2.0rem 1.0rem 2.0rem 1.0rem;
+}
+
+.about .profile div{
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: justify;
+  vertical-align: middle;
+  margin-left: 1.5rem;
+}
+
+.about .profile .profile-image{
+  width: 20%;
+}
+
+.about .profile .profile-image img{
+  border-radius: 50%;
+}
+
+.about .profile .profile-description{
+  width: 70%;
+}
+
