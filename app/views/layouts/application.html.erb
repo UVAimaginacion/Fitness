@@ -6,24 +6,28 @@
     <title>Fitness</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli" rel="stylesheet" type="text/css"/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <!-- Redireccionando para los diferentes roles  -->
-  <% if user_signed_in? %>
 
-     <!-- <= render 'welcome/navbarusuario' %>   -->
-  <%else %>
-      <!-- <= render 'welcome/navbarhome' %> -->
+      <header>
+        <% if user_signed_in? %>
+            <%= render 'welcome/navbar' %>
+        <%else %>
+            <%= render 'welcome/navlanding' %>
+        <% end %>
+      </header>
+      <!-- Redireccionando para los diferentes roles  -->
 
-  <% end %>
+
 
 
       <%= yield %>
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+  <!-- <= render 'welcome/navbarhome' %>
+      <p class="notice"><= notice %></p>
+      <p class="alert"><= alert %></p>-->
 
   </body>
 
