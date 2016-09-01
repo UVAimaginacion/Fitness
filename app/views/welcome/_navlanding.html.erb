@@ -9,7 +9,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
+<<<<<<< HEAD
         <li><%= link_to "About", about_path %></li>
+=======
+        <li><%= link_to "About", '/about' %></li>
+>>>>>>> db7f40cdf3ba27b8ecb797f4d9cff611c7db39f5
         <% if user_signed_in? %>
             <li><%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %></li>
         <%else %>
