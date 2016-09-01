@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   post    '/comentarios',           to: 'comment#create'
 
   get     '/rutinaespecifica',   to: 'welcome#rutinaespecifica'
+  get     '/rutina',             to: 'welcome#rutinas'
+  get     '/foro',                to: 'welcome#foro'
+  get     '/about',               to: 'welcome#about'
 
   #root "welcome#rutinas"
   #root 'welcome#foro'

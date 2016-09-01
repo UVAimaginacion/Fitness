@@ -5,15 +5,11 @@
        <%= link_to "FitMove",root_path, class:"navbar-brand logo"  %>
     </div>
     <ul class="nav navbar-nav">
-      <li class="dropdown"><a data-toggle="dropdown" >Alimentación <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "Recetas", recipes_path%></li>
-          <li><%= link_to "Tips", tips_path%></li>
-        </ul>
-      </li>
-      <li><%= link_to "Rutinas", rutinas_path%></li>
+      <li><%= link_to "Recetas", recipes_path%></li>
+      <li><%= link_to "Tips", tips_path%></li>
+      <li><%= link_to "Rutinas", "/rutina"%></li>
       <li><%= link_to "Eventos", events_path %></li>
-      <li><%= link_to "Foro", events_path%></li>
+      <li><%= link_to "Foro", "/foro"%></li>
 
       <% if can? :manage, @users %>
           <li><%= link_to "Registros", registros_path%></li>
@@ -23,7 +19,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", root_path %></li>
+        <li><%= link_to "About", '/about' %></li>
         <% if user_signed_in? %>
             <li><%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %></li>
         <% end %>
