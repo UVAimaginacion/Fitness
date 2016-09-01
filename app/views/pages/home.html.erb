@@ -7,9 +7,12 @@
   </div>
 </div>
 
-<div class="container home-linkregistro">
-  <%=link_to "Regístrate totalmente gratis y accede al mejor contenido FitMove", new_user_registration_path, class: "btn btn-primary btn-lg btn-block", style: 'font-size:30px' %>
-</div>
+<% unless  user_signed_in? %>
+    <div class="container home-linkregistro">
+      <%=link_to "Regístrate totalmente gratis y accede al mejor contenido FitMove", new_user_registration_path, class: "btn btn-primary btn-lg btn-block", style: 'font-size:30px' %>
+    </div>
+<% end %>
+
 
 <div class="row">
 
@@ -90,6 +93,8 @@
 
 </div>
 
-<div class="container home-linkregistro">
-  <%=link_to "Regístrate totalmente gratis y accede al mejor contenido FitMove.", new_user_registration_path, class: "btn btn-primary btn-lg btn-block", style: 'font-size:30px' %>
-</div>
+<% unless user_signed_in? %>
+    <div class="container home-linkregistro">
+      <%=link_to "Regístrate totalmente gratis y accede al mejor contenido FitMove", new_user_registration_path, class: "btn btn-primary btn-lg btn-block", style: 'font-size:30px' %>
+    </div>
+<% end %>
