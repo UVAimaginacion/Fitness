@@ -1,4 +1,3 @@
-
 $color-background : #e9ebee;
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -9,25 +8,86 @@ $color-background : #e9ebee;
 @import "rutinaespecifica";
 @import "foro";
 
-* {
-  box-sizing: border-box;
-}
+@import url(//db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli);
+  /* Override Bootstrap 3 font locations */
+  @font-face {font-family: "MV Boli";
+    src: url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.eot");
+    src: url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.svg#MV Boli") format("svg");
+  }
+  * {
+    box-sizing: border-box;
+  }
 
-.jumbotron-home {
-  background-image: url(https://photos-2.dropbox.com/t/2/AADOytTmNsIErXXwLhao7D0CC-XnyXlW7qr5QRHYO4g4cA/12/589416381/jpeg/32x32/1/_/1/2/Landing.jpg/EMnY0t8EGBAgAigC/If2eneuS_poSUzeJ6nvfsgYBRJfr6Z-Wx2yK_nLHO5U?size=1600x1200&size_mode=3);
-  background-size: 100% 100%;
-  height: 500px;
-  margin:0;
-  -moz-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-}
+  .home-wrapper{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    background-size: cover;
+    color: white;
+  }
+  header{
+    background-color: rgba(48,48,48,0.5);
+    position: fixed;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 2;
+  }
 
-.titulo-home {
-  color: white;
-  text-align: left;
-  margin-left: 20px;
-}
+  .logo{
+    font-family: "MV Boli";
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .jumbotron-home {
+    background-image: url(https://photos-2.dropbox.com/t/2/AADOytTmNsIErXXwLhao7D0CC-XnyXlW7qr5QRHYO4g4cA/12/589416381/jpeg/32x32/1/_/1/2/Landing.jpg/EMnY0t8EGBAgAigC/If2eneuS_poSUzeJ6nvfsgYBRJfr6Z-Wx2yK_nLHO5U?size=1600x1200&size_mode=3);
+    background-size: 100% 100%;
+    height: 500px;
+    margin:0;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+  }
+
+  .titulo-home {
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .h1-home{
+    display: inline-block;
+    font-size: 90px !important;
+  }
+
+  .home-linkregistro {
+    color: #F7F7F7;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+  }
+
+  .home-tips {
+    display: inline-block;
+  }
+
+  .home-image-tip {
+    height: 477px;
+  }
+
+  .home-description {
+    color: #ffffff;
+    font-size: 1.5em;
+    height: 500px;
+
+  }
+
+
+
 
 .container-cards{
   padding-bottom: 2.0rem;
@@ -64,34 +124,7 @@ $color-background : #e9ebee;
   cursor: hand;
 }
 
-.h1-home{
-  display: inline-block;
-  font-size: 90px !important;
-}
 
-.home-linkregistro {
-  color: #F7F7F7;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
-  text-align: center;
-}
-
-.home-tips {
-  display: inline-block;
-}
-
-.home-image-tip {
-  height: 477px;
-}
-
-.home-description {
-  color: #ffffff;
-  font-size: 1.5em;
-  height: 500px;
-
-}
 
 
 
